@@ -1,0 +1,351 @@
+*{
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+   
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.father-class{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#form-container{
+    border-radius: 5%;
+    border: 2px grey solid;
+    margin: 20px;
+    overflow-y: auto;
+}
+
+#form-container::-webkit-scrollbar{
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px grey solid;
+}
+.title-arrow{
+    position:relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.material-symbols-outlined{
+    font-size: 30px;
+    color: #16A6E4;
+    font-weight: 900;
+}
+.title-title{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form .txt_field{
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-bottom: 3px solid grey;
+}
+
+.txt_field input, .txt_field select{
+    height: 50px;
+    margin-top: 7px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+select{
+    width: 200px;
+    height: 50px;
+}
+
+.txt_field label{
+    position: absolute;
+    color: rgba(0, 0, 0, 0.637);
+    transform: translateY(-50%);
+    top: 55%;
+    left: 0px;
+    pointer-events: none;
+    transition: .2s;
+}
+
+.txt_field input{
+    opacity: 0.637;
+}
+
+#date{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+
+#date::-webkit-calendar-picker-indicator{
+    padding-left: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 25px;
+    height: 25px;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#date:in-range::-webkit-datetime-edit-year-field, 
+#date:in-range::-webkit-datetime-edit-month-field, 
+#date:in-range::-webkit-datetime-edit-day-field, 
+#date:in-range::-webkit-datetime-edit-text{
+    color: transparent;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 45%;
+    text-align: left;
+}
+
+
+.barBottom{
+    position: absolute;
+    float: left;
+    background-color: #16A6E4;
+    margin-top: 50px;
+    margin-right: 5000px;
+    width: 200px;
+    color: #16A6E4;
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    margin: 0px;
+    border: 0px;
+    top: 57px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #16A6E4;
+    transition: .4s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: 5px;
+    color: #16A6E4;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+
+#footer-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#footer-container #submit{
+    width: 33%;
+    height: 50px;
+    margin: 10px;
+    font-size: 16px;
+    background: #16A6E4;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container-check{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    border-radius: 5px;
+}
+   
+.container {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    margin:5px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-radius: 5px;
+}
+   
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0px;
+    height: 12px;
+    width: 12px;
+    background-color: #8d8d8d88;
+    border-radius: 5%;
+}
+
+.container input:checked ~ .checkmark {
+    box-shadow: 1px 1px 0px rgb(183, 183, 183);
+    transition: all 0.2s;
+    opacity: 1;
+    background-image: linear-gradient(45deg, rgb(14, 124, 171) 0%, #16A6E4 100%);
+}
+   
+.container input ~ .checkmark {
+    transition: all 0.2s;
+    opacity: 1;
+    box-shadow: 0.5px 0.5px 0px rgb(183, 183, 183);
+}
+   
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s;
+}
+   
+
+.container input:checked ~ .checkmark:after {
+    opacity: 1;
+    transition: all 0.2s;
+}
+   
+
+.container .checkmark:after {
+    left: 4px;
+    top: 2.2px;
+    width: 2.5px;
+    height: 4.5px;
+    border: solid white;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+}
+
+#checkbox-title{
+    text-align: justify;
+    font-size: 13px;
+    margin-right: 20px;
+}
+
+.link{
+    padding-left: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #16A6E4;
+}
+
+.txt_field select option{
+    color: rgba(0, 0, 0, 0.637);
+}
+
+#DocType, #Sex{
+    color: rgba(0, 0, 0, 0.637);
+}
+
+#DocType option:checked{
+    background-color: #16A6E4;
+    color: white;
+}
+#Sex option:checked{
+    background-color: #16A6E4;
+    color: white;
+}
+#login{
+    margin-bottom: 10px;
+}
+.txt_field input, .txt_field select, .txt_field label, #DocType, #Sex, .tlabel{
+    transition: 0.2s;
+}
+
+@media only screen and (min-width: 501px) {
+    .text, .txt_field select, .txt_field label, #DocType, #Sex, .tlabel{
+        width: 200px;
+        font-size: 16px;
+    }
+    #date::-webkit-calendar-picker-indicator{
+        padding-left: 175px;
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .text, .txt_field select, .txt_field label, #DocType, #Sex, .tlabel, input[type="date"]::-webkit-datetime-edit {
+        width: 150px;
+        font-size: 12px;
+    }
+    #date::-webkit-calendar-picker-indicator{
+        padding-left: 125px;
+        width: 18.7px;
+        height: 18.7px;
+    }
+    .txt_field input, .txt_field select{
+        height: 37.5px;
+    }
+    .txt_field span::before{
+        top: 45px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .text, .txt_field select, .txt_field label, #DocType, #Sex, .tlabel, input[type="date"]::-webkit-datetime-edit {
+        width: 100px;
+        font-size: 8px;
+    }
+    #date::-webkit-calendar-picker-indicator{
+        padding-left: 75px;
+        width: 12.5px;
+        height: 12.5px;
+    }
+    .txt_field input, .txt_field select{
+        height: 25px;
+    }
+    .txt_field span::before{
+        top: 32px;
+    }
+}

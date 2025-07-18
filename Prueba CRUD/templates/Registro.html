@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="../static/Hotelia.ico"><!--Icono de la pagina-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/_css/registro.css">
+</head>
+<body>
+<div class="father-class">
+    <div id="form-container">
+        <form action="">
+            <div class="title-container">
+                <a href="../templates/index.html" class="title-arrow">
+                    <span class="material-symbols-outlined">
+                        arrow_back
+                    </span>
+                </a>
+                <H1 class="title-title">Registro</H1>
+            </div>
+            <div class="row">
+                <div class="txt_field">
+                    <input type="text" class="text" required>
+                    <span></span>
+                    <label class="tlabel">Nombre</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" class="text" required>
+                    <span></span>
+                    <label class="tlabel">Apellidos</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="txt_field" id="select">
+                    <select name="DocType" id="DocType" required>
+                        <option value="null">Tipo Documento</option>
+                        <option value="CC">Cedula</option>
+                        <option value="TI">Tarjeta Identidad</option>
+                        <option value="EX">Extranjera</option>
+                    </select>          
+                </div>
+                <div class="txt_field">
+                    <input type="text" class="text" required>
+                    <span></span>
+                    <label class="tlabel">Numero Documento</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="txt_field">
+                    <input type="text" class="text" required>
+                    <span></span>
+                    <label class="tlabel">Numero Celular</label>
+                </div>
+                <div class="txt_field">
+                    <select name="Sex" id="Sex" required>
+                        <option value="null">Genero</option>
+                        <option value="Male">Masculino</option>
+                        <option value="Female">Femenino</option>
+                        <option value="LGTB">Otro</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="txt_field">
+                    <input type="date" id="date" required>
+                    <span></span>
+                    <label>Fecha de nacimiento</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" class="text" required>
+                    <span></span>
+                    <label class="tlabel">Ciudad</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="txt_field">
+                    <input type="email" class="text" required>
+                    <span></span>
+                    <label>Correo Electronico</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" class="text" required>
+                    <span></span>
+                    <label class="tlabel">Confirmar Correo</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="txt_field">
+                    <input type="password" class="text" required>
+                    <span></span>
+                    <label class="tlabel">Contraseña</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" class="text" required>
+                    <span></span>
+                    <label class="tlabel">Confirmar Contraseña</label>
+                </div>
+            </div>
+        <div id="footer-container">
+            <div class="container-check">             
+                <label class="container">
+                    <input id="checkbox1" type="checkbox" >
+                    <div class="checkmark"></div>
+                </label>
+                <label id="checkbox-title">Al registrarte, aceptas nuestras condiciones de uso y Política de privacidad.</label>
+            </div>
+            <input type="submit" id="submit">
+            <p id="login">¿Ya tienes cuenta? <a class="link" href="login">Iniciar Sesión</a></p>
+        </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
