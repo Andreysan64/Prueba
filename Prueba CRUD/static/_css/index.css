@@ -415,13 +415,26 @@ button:hover{
 
 .acciones {
     display: flex;
-    justify-content: flex-start; /* para que botones estén al inicio */
-    gap: 10px; /* espacio entre botones */
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.card-solicitud .acciones {
+    opacity: 0;
+    transform: translateY(-5px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-solicitud:hover .acciones {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .acciones button {
-    max-width: 100px; /* evitar que sean muy grandes */
-    width: 100px; /* mejor que max-width + flex:1 para consistencia */
+    max-width: 100px;
+    width: 100px;
     padding: 6px 10px;
     border-radius: 4px;
     border: none;

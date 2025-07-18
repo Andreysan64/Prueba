@@ -148,10 +148,6 @@ document.querySelector(".solicitudes-estados select").addEventListener("change",
     filtrarTarjetas();
 });
 
-function normalizarTexto(texto) {
-    return texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-}
-
 document.querySelector('.input-busqueda').addEventListener('input', function() {
     const termino = normalizarTexto(this.value);
     const tarjetas = document.querySelectorAll('.card-solicitud');
@@ -214,6 +210,7 @@ function crearTarjeta(solicitud) {
 
         tituloModal.innerText = 'Editar Solicitud';
         modal.classList.remove('hidden');
+        document.querySelector('.opcion-cerrado').style.display = 'block';
     });
 
     // Acción Eliminar (solo cambia el estado visualmente)
@@ -225,6 +222,7 @@ function crearTarjeta(solicitud) {
         tarjeta.classList.add('estado-eliminado');
 
         actualizarContador();
+        filtrarTarjetas();
     });
 
     document.querySelector('.cards-solicitudes').appendChild(tarjeta);
@@ -247,6 +245,8 @@ document.querySelector('.btn-crear').addEventListener('click', () => {
     formulario.reset();
     tituloModal.innerText = 'Nueva Solicitud';
     modal.classList.remove('hidden');
+
+    document.querySelector('.opcion-cerrado').style.display = 'none';
 });
 
 /* GUARDAR FORMULARIO */
@@ -262,12 +262,14 @@ formulario.addEventListener('submit', (e) => {
 
     if (modo === 'crear') {
         crearTarjeta(nuevaSolicitud);
+        filtrarTarjetas();
     } else if (modo === 'editar' && tarjetaEditando) {
         tarjetaEditando.querySelector('h4').innerText = nuevaSolicitud.titulo;
         tarjetaEditando.querySelector('.asignado').innerText = nuevaSolicitud.asignado;
         tarjetaEditando.querySelector('.descripcion').innerText = nuevaSolicitud.descripcion;
         tarjetaEditando.querySelector('.estado').innerText = nuevaSolicitud.estado;
         tarjetaEditando.className = `card-solicitud estado-${normalizarTexto(nuevaSolicitud.estado)}`;
+        filtrarTarjetas();
     }
 
     modal.classList.add('hidden');
