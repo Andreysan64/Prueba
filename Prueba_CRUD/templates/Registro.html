@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="../static/Hotelia.ico"><!--Icono de la pagina-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../static/_css/registro.css">
+</head>
+<body>
+<div class="father-class">
+    <div id="form-container">
+        <form id="formRegistro">
+            <div class="title-container">
+                <h1 class="title-title">Registro</h1>
+            </div>
+        
+            <div class="txt_field">
+                <input type="text" id="nombre" name="nombre" required placeholder=" ">
+                <label>Nombre</label>
+            </div>
+        
+            <div class="txt_field">
+                <input type="text" id="apellidos" name="apellidos" required placeholder=" ">
+                <label>Apellidos</label>
+            </div>
+        
+            <div class="txt_field">
+                <input type="email" id="correo" name="correo" required placeholder=" " autocomplete="email">
+                <label>Correo Electrónico</label>
+            </div>
+        
+            <div class="txt_field">
+                <input type="email" id="confirmarCorreo" name="confirmarCorreo" required placeholder=" " autocomplete="email">
+                <label>Confirmar Correo</label>
+            </div>
+        
+            <div class="txt_field">
+                <input type="password" id="password" name="password" required placeholder=" " autocomplete="new-password">
+                <label>Contraseña</label>
+            </div>
+        
+            <div class="txt_field">
+                <input type="password" id="confirmarPassword" name="confirmarPassword" required placeholder=" " autocomplete="new-password">
+                <label>Confirmar Contraseña</label>
+            </div>
+        
+            <div id="footer-container">
+                <div class="container-check">
+                    <label class="container">
+                        <input id="checkbox1" type="checkbox">
+                        <div class="checkmark"></div>
+                    </label>
+                    <label id="checkbox-title">Al registrarte, aceptas nuestras condiciones de uso y Política de privacidad.</label>
+                </div>
+            
+                <button type="submit" id="submit">Enviar</button>
+            
+                <p id="login">¿Ya tienes cuenta? <a class="link" href="../templates/Login.html">Iniciar Sesión</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="../static/_js/registro.js"></script>
+</body>
+</html>

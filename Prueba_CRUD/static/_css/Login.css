@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #aed1ff 0%, #aafcff 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Contenedor Principal */
+.fatherContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Formulario */
+.center {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Título */
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: #202020;
+    position: relative;
+}
+
+.title h1 {
+    font-size: 25px;
+    color: #202020;
+}
+
+/* Campos */
+.txt_field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+    background: white;
+}
+
+/* Efecto al enfocar */
+.txt_field input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.2);
+}
+
+/* Etiquetas flotantes */
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #888;
+    background: white;
+    padding: 0 5px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* ACTIVA EL EFECTO: focus o texto */
+.txt_field input:focus + label,
+.txt_field input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+/* Iconos */
+.icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #0056b3, #003d80);
+}
+
+/* Texto registro */
+p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #555;
+}
+
+.link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .title h1 {
+        font-size: 20px;
+    }
+
+    .material-symbols-outlined {
+        font-size: 24px;
+    }
+}

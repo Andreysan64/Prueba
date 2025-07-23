@@ -1,0 +1,273 @@
+<!DOCTYPE html>Add commentMore actions
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lensart_la</title>
+    <link rel="stylesheet" href="../static/_css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="Header-content">
+            <div class="Logo">
+                <a href="../templates/Index.html" class="card-link">
+                    <img src="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="Info">
+            <div class="solicitudes-container">
+                <div class="solicitudes-header">
+                    <h2>Mis solicitudes</h2>
+                    <div class="solicitudes-buscador">
+                        <p>Buscar</p>
+                        <div class="input-con-icono">
+                            <i class="fas fa-search"></i>
+                            <input type="text" class="input-busqueda"/>
+                        </div>
+                    </div>
+                    <div class="solicitudes-estados">
+                        <p>Estado</p>
+                        <div class="solicitudes-estados-wrapper">
+                            <select id="filtroEstado">
+                                <option value="Todos">Todos</option>
+                                <option value="Solicitado">Solicitado</option>
+                                <option value="Pendiente">Pendiente</option>
+                                <option value="Operación">Operación</option>
+                                <option value="Cerrado">Cerrado</option>
+                                <option value="Eliminado">Eliminado</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-crear">
+                        <span>+</span> Crear solicitud
+                    </button>
+                </div>
+
+                <!-- SIMULACIÓN DE DATOS -->
+              
+                <div class="solicitudes-listado">
+                    <div class="cards-solicitudes">
+
+                        <div class="card-solicitud estado-pendiente">
+                            <h4>Diseñar base de datos</h4>
+                            <div class="solicitud-info">
+                                <span class="estado">Pendiente</span>
+                                <div class="soli-dato">
+                                    <p><strong>Asignada a:</strong></p>
+                                    <p>Yo mismo</p>
+                                </div>
+                                <div class="soli-dato">
+                                    <p><strong>Descripción:</strong></p>
+                                    <p>Crear el esquema de la base de datos en PostgreSQL.</p>
+                                </div>
+                                <div class="acciones">
+                                    <button class="btn-editar">Editar</button>
+                                    <button class="btn-eliminar">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-solicitud estado-pendiente">
+                            <h4>Implementar API REST</h4>
+                            <div class="solicitud-info">
+                                <span class="estado">Pendiente</span>
+                                <div class="soli-dato">
+                                    <p><strong>Asignada a:</strong></p>
+                                    <p>María Gómez</p>
+                                </div>
+                                <div class="soli-dato">
+                                    <p><strong>Descripción:</strong></p>
+                                    <p>Programar endpoints en PHP para CRUD de tareas.</p>
+                                </div>
+                                <div class="acciones">
+                                    <button class="btn-editar">Editar</button>
+                                    <button class="btn-eliminar">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-solicitud estado-cerrado">
+                            <h4>Crear interfaz frontend</h4>
+                            <div class="solicitud-info">
+                                <span class="estado">Cerrado</span>
+                                <div class="soli-dato">
+                                    <p><strong>Asignada a:</strong></p>
+                                    <p>Yo mismo</p>
+                                </div>
+                                <div class="soli-dato">
+                                    <p><strong>Descripción:</strong></p>
+                                    <p>Hacer formulario y listado con JS y HTML.</p>
+                                </div>
+                                <div class="acciones">
+                                    <button class="btn-editar">Editar</button>
+                                    <button class="btn-eliminar">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-solicitud estado-cerrado">
+                            <h4>Documentar API</h4>
+                            <div class="solicitud-info">
+                                <span class="estado">Cerrado</span>
+                                <div class="soli-dato">
+                                    <p><strong>Asignada a:</strong></p>
+                                    <p>Yo mismo</p>
+                                </div>
+                                <div class="soli-dato">
+                                    <p><strong>Descripción:</strong></p>
+                                    <p>Escribir documentación para desarrolladores.</p>
+                                </div>
+                                <div class="acciones">
+                                    <button class="btn-editar">Editar</button>
+                                    <button class="btn-eliminar">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-solicitud estado-pendiente">
+                            <h4>Optimizar consultas SQL</h4>
+                            <div class="solicitud-info">
+                                <span class="estado">Pendiente</span>
+                                <div class="soli-dato">
+                                    <p><strong>Asignada a:</strong></p>
+                                    <p>María Gómez</p>
+                                </div>
+                                <div class="soli-dato">
+                                    <p><strong>Descripción:</strong></p>
+                                    <p>Mejorar rendimiento de consultas en PostgreSQL.</p>
+                                </div>
+                                <div class="acciones">
+                                    <button class="btn-editar">Editar</button>
+                                    <button class="btn-eliminar">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-solicitud estado-pendiente">
+                            <h4>Configurar servidor web</h4>
+                            <div class="solicitud-info">
+                                <span class="estado">Pendiente</span>
+                                <div class="soli-dato">
+                                    <p><strong>Asignada a:</strong></p>
+                                    <p>Juan Pérez</p>
+                                </div>
+                                <div class="soli-dato">
+                                    <p><strong>Descripción:</strong></p>
+                                    <p>Instalar y configurar Apache/Nginx para el proyecto.</p>
+                                </div>
+                                <div class="acciones">
+                                    <button class="btn-editar">Editar</button>
+                                    <button class="btn-eliminar">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-solicitud estado-cerrado">
+                            <h4>Diseñar wireframes</h4>
+                            <div class="solicitud-info">
+                                <span class="estado">Cerrado</span>
+                                <div class="soli-dato">
+                                    <p><strong>Asignada a:</strong></p>
+                                    <p>Yo mismo</p>
+                                </div>
+                                <div class="soli-dato">
+                                    <p><strong>Descripción:</strong></p>
+                                    <p>Crear prototipos para la interfaz de usuario.</p>
+                                </div>
+                                <div class="acciones">
+                                    <button class="btn-editar">Editar</button>
+                                    <button class="btn-eliminar">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-solicitud estado-pendiente">
+                            <h4>Implementar autenticación</h4>
+                            <div class="solicitud-info">
+                                <span class="estado">Pendiente</span>
+                                <div class="soli-dato">
+                                    <p><strong>Asignada a:</strong></p>
+                                    <p>María Gómez</p>
+                                </div>
+                                <div class="soli-dato">
+                                    <p><strong>Descripción:</strong></p>
+                                    <p>Crear sistema de registro e inicio de sesión seguro.</p>
+                                </div>
+                                <div class="acciones">
+                                    <button class="btn-editar">Editar</button>
+                                    <button class="btn-eliminar">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-solicitud estado-pendiente">
+                            <h4>Integrar notificaciones</h4>
+                            <div class="solicitud-info">
+                                <span class="estado">Pendiente</span>
+                                <div class="soli-dato">
+                                    <p><strong>Asignada a:</strong></p>
+                                    <p>Juan Pérez</p>
+                                </div>
+                                <div class="soli-dato">
+                                    <p><strong>Descripción:</strong></p>
+                                    <p>Enviar alertas y recordatorios a usuarios.</p>
+                                </div>
+                                <div class="acciones">
+                                    <button class="btn-editar">Editar</button>
+                                    <button class="btn-eliminar">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIN SIMULACIÓN DE DATOS -->
+
+                <div class="solicitudes-footer">
+                    <p>Total registros <strong></strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-formulario" class="modal-crear hidden">
+        <div class="modal-contenido">
+            <h3 id="modal-titulo">Nueva Solicitud</h3>
+            <form id="formularioSolicitud" style="position: relative;">
+                <label>Título:</label>
+                <input type="text" name="titulo" required>
+            
+                <label>Asignado a:</label>
+                <input type="text" name="asignado" id="inputAsignado" required>
+                <div id="sugerenciasAsignado" class="sugerencias"></div>
+            
+                <label>Descripción:</label>
+                <textarea name="descripcion" required></textarea>
+            
+                <label>Estado:</label>
+                <div>
+                    <select name="estado" required>
+                        <option value="Solicitado">Solicitado</option>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="Operación">Operación</option>
+                        <option value="Cerrado" class="opcion-cerrado">Cerrado</option>
+                        <option value="Eliminado" class="opcion-eliminado">Eliminado</option>
+                    </select>
+                </div>
+            
+                <div class="modal-buttons">
+                    <button type="button" id="cancelarModal">Cancelar</button>
+                    <button type="submit">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../static/_js/index.js"></script>
+</body>
+</html>
